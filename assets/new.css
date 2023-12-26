@@ -4,7 +4,6 @@
     display: inline-block;
     /*float: left;*/
     width: 350px;
-    height: 230px;
 }
 
 .interactive-image {
@@ -81,6 +80,7 @@
     transition: filter 0.3s;
     border-radius: 3px; /* 테두리 둥글기 설정 */
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1); /* 그림자 설정 */
+    height: 240px;
 
 
 }
