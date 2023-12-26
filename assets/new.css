@@ -4,6 +4,7 @@
     display: inline-block;
     /*float: left;*/
     width: 350px;
+    height: 230px;
 }
 
 .interactive-image {
@@ -49,7 +50,7 @@
 }
 
 .contents{
-    /*width: 650px;*/
+    max-width: 650px;
     position: relative;
     float: right;
     /*width: 100%; !* 전체 너비로 설정 *!*/
@@ -116,11 +117,21 @@ blockquote {
 
 @media (max-width: 1199px) {
     .contents{
-        /*width: 650px;*/
+        max-width: 500px;
         position: relative;
         float: none;
-        /*width: 100%; !* 전체 너비로 설정 *!*/
-        text-align: center; /* 가운데 정렬 */
-        margin-top: 20px; /* 간격 조절 */
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, 0%);
     }
 }
+
+@media (max-width: 992px) {
+    .contents{
+        /*max-width: 500px;*/
+        position: relative;
+        float: none;
+
+    }
+}
+
