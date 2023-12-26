@@ -1,0 +1,109 @@
+.image-container{
+    flex: 1;
+    position: relative;
+    display: inline-block;
+    float: left;
+    width: 350px;
+}
+
+.interactive-image {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    font-size: 18px;
+    text-align: center;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.overlay.active {
+    display: flex;
+}
+.darken-on-hover {
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: filter 0.3s ease;
+    position: relative;
+}
+
+.darken-on-hover:hover {
+    filter: brightness(60%);
+}
+
+.layout .details h4{
+    margin-bottom: 30px;
+
+}
+
+.contents{
+    position: relative;
+    float: right;
+}
+
+.container list-container container{
+    display: flex;
+}
+
+.github-link {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.darken-on-hover:hover .github-link {
+    opacity: 1;
+}
+
+.base-image {
+    transition: filter 0.3s;
+    border-radius: 3px; /* 테두리 둥글기 설정 */
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1); /* 그림자 설정 */
+
+
+}
+
+/* 마우스를 올렸을 때 어두운 효과를 주기 위한 스타일 */
+.image-container:hover .base-image {
+    filter: brightness(50%);
+}
+
+/* 겹쳐지는 이미지 스타일 */
+.overlay-image {
+    width: 100px;
+    position: absolute;
+    top: 40%; /* 기본 이미지의 중앙으로 이동 */
+    left: 50%; /* 기본 이미지의 중앙으로 이동 */
+    transform: translate(-50%, -50%); /* 이미지 중앙에 정렬 */
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+/* 마우스를 올렸을 때 겹쳐지는 이미지 표시 */
+.image-container:hover .overlay-image {
+    opacity: 1;
+}
+
+blockquote {
+    border-left: 5px solid #898989;
+    background-color: #f7f7f7; /* 빨간색 배경 색상 */
+    padding: 10px; /* 내부 여백 설정 */
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1); /* 그림자 설정 */
+    border-top-right-radius: 8px; /* 오른쪽 위 둥글기 설정 */
+    border-bottom-right-radius: 8px; /* 오른쪽 아래 둥글기 설정 */
+}
